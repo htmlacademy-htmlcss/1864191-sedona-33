@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Людмила Арутюнянц](https://up.htmlacademy.ru/htmlcss/33/user/1864191).
-* Наставник: `Ирина Малиновская`.
+* Наставник: `Ирина Малиновская(https://htmlacademy.ru/profile/irina-malinovskaya)`.
 
 ---
 
