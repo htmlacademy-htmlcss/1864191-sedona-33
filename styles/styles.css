@@ -110,6 +110,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
   .advantages-item:nth-child(1),
@@ -118,7 +119,7 @@ body {
 }
 
 .advantages-item:nth-child(even) {
-  background-color: hsl(204 48% 67% / 0.12)
+  background-color: rgba(130, 179, 211, 0.12);
 }
 
 .advantages-item:nth-child(3) {
@@ -126,7 +127,7 @@ body {
 }
 
 .advantages-item:nth-child(7) {
-  background-color: hsl(204 48% 67% / 0.2);
+  background-color: rgba(130, 179, 211, 0.2);
 }
 
 .advantages-description {
