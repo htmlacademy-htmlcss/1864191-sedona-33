@@ -78,46 +78,47 @@ body {
 
 .page-header {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   width: 1060px;
-  height: 70px;
+  min-height: 65px;
   margin: 0 auto;
   color: #000000;
   background-color: #ffffff;
   }
 
 .header-logo {
-  z-index: 1;
+  position: absolute;
 }
 
 .navigation {
   display: flex;
   width: 1060px;
   margin: 0 auto;
+  min-height: 66px;
 }
 
 .navigation-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
-  width: 345px;
-  height: 66px;
+  min-width: 345px;
+  height: 65px;
   margin: 0;
-  margin-left: 30px;
+  margin-left: 186px;
+  margin-right: auto;
   padding: 0;
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 34px;
 }
 
 .navigation-user {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   width: 264px;
-  height: 66px;
+  height: 65px;
   margin: 0;
-  margin-left: auto;
   padding: 0;
 }
 
@@ -130,10 +131,14 @@ body {
   color: inherit;
 }
 
-.navigation-user-item:nth-child(2) {
-  margin-left: 10px;
-  margin-right: 20px;
+.navigation-user-item:nth-child(1) {
+  margin-right: 24px;
 }
+
+.navigation-user-item:nth-child(2) {
+  margin-right: 33px;
+}
+
 
 .navigation-button {
   width: 160px;
@@ -157,7 +162,7 @@ body {
 .promo {
   width: 100%;
   min-height: 485px;
-  margin-top: -4px;
+  margin-bottom: 63px;
   text-align: center;
   background-color: #928680;
   background: url("../images/divider.svg") bottom no-repeat,
@@ -173,7 +178,8 @@ body {
 /*advantages*/
 
 .advantages-slogan {
-  margin-top: 63px;
+  margin: 0;
+  margin-bottom: 31px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
@@ -183,7 +189,7 @@ body {
 }
 
 .advantages-title {
-  margin-top: 31px;
+  margin: 0;
   margin-bottom: 80px;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -212,7 +218,7 @@ body {
 
 .advantages-text {
   width: 400px;
-  height: 384px;
+  min-height: 384px;
   margin: 0;
   padding: 0;
 }
@@ -274,8 +280,11 @@ body {
 /*search*/
 
 .hotel-search {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 417px;
+  margin: 0;
 }
 
 .hotel-search-title {
@@ -291,6 +300,7 @@ body {
 
 .hotel-search-description {
   margin: 0;
+  margin-bottom: 56px;
   padding-top: 29px;
   text-align: center;
   font-family: "PT Sans", sans-serif;
@@ -299,17 +309,9 @@ body {
   font-weight: 400;
  }
 
-.search-button {
-  margin: 0;
-  padding-top: 56px;
-  text-align: center;
-}
-
 .hotel-search-button {
-  width: 575px;
+  min-width: 575px;
   height: 60px;
-  margin: 0 auto;
-  padding: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
@@ -407,7 +409,7 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 408px;
-  margin-top: -4px;
+  margin-bottom: 44px;
   color: #ffffff;
   background-color: #756257;
   background-image: url("../images/catalog-background.jpg");
@@ -416,8 +418,8 @@ body {
 
 .inner-header-title {
   margin: 0;
-  margin-top: 35px;
-  margin-left: 71px;
+  padding-top: 35px;
+  padding-left: 71px;
   font-family: "PT Sans", sans-serif;
   font-size: 60px;
   line-height: 78px;
@@ -429,22 +431,21 @@ body {
   margin: 0;
   margin-bottom: 45px;
   padding-left: 73px;
-  justify-content: flex-start;
 }
 
 .breadcrumbs-link {
   margin-right: 26px;
+  padding: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: auto;
+  line-height: 21px;
   font-weight: 400;
 }
 
-.catalog-container {
+.catalog-filter-form {
   display: flex;
-  flex-direction: row;
   margin: 0;
-  padding: 0 72px;
+  padding: 0 71px;
 
 }
 
@@ -508,18 +509,19 @@ body {
 
 /*sorting*/
 
-.sort-wrapper {
+.sort {
   display: flex;
   align-items: center;
   max-width: 1057px;
   height: 48px;
   margin: 0 auto;
-  margin-top: 44px;
   margin-bottom: 53px;
 }
 
 .sort-found {
   display: inline-block;
+  margin: 0;
+  margin-right: 192px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: auto;
@@ -530,7 +532,7 @@ body {
 }
 
 .select-control-sorting {
-  margin-left: 192px;
+  margin-right: 81px;
   padding-left: 17px;
   min-width: 287px;
   min-height: 48px;
@@ -547,12 +549,16 @@ body {
   width: 160px;
   display: flex;
   justify-content: space-between;
-  margin-left: 81px;
-  }
+}
 
 .sort-button {
-  width: 48px;
-  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 46px;
+  height: 46px;
   border: 2px solid #000000;
   border-radius: 4px;
   background-color: #ffffff;
@@ -566,6 +572,7 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 auto;
+  margin-bottom: 34px;
   padding: 0;
 }
 
@@ -580,6 +587,10 @@ body {
 .card-item:nth-child(2) {
   margin-left: 18px;
   margin-right: 18px;
+}
+
+.card-item:last-child {
+  margin-bottom: 0;
 }
 
 .card-title {
@@ -679,10 +690,10 @@ body {
 
 .show-more-wrapper {
   width: 1056px;
-  height: 120px;
+  min-height: 60px;
   margin: 0 auto;
-  margin-top: 24px;
   margin-bottom: 30px;
+  padding: 30px;
   text-align: center;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -691,11 +702,11 @@ body {
 .button-show-more {
   width: 620px;
   height: 60px;
-  margin: 30px;
+  margin: 0;
   padding: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
-  line-height: auto;
+  line-height: 26px;
   font-weight: 700;
   text-align: center;
   color: #ffffff;
@@ -711,6 +722,7 @@ body {
   width: 1056px;
   height: 55px;
   margin: 0 auto;
+  margin-bottom: 73px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -782,9 +794,8 @@ display: flex;
 flex-direction: column;
 align-content: space-between;
 width: 800px;
-height: 241px;
+min-height: 241px;
 margin: 0 auto;
-margin-top: 73px;
 margin-bottom: 140px;
 }
 
@@ -797,9 +808,10 @@ margin-bottom: 140px;
 .page-footer-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 1200px;
-  height: 120px;
-  margin: 0;
+  min-height: 120px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -807,16 +819,16 @@ margin-bottom: 140px;
   display: flex;
   flex-direction: row;
   width: 107px;
-  height: 18px;
-  margin-left: 72px;
+  min-height: 18px;
+  margin-right: 61px;
   padding: 0;
   justify-content: space-between;
+  align-items: center;
 }
 
 .phone {
   width: 720px;
   margin-right: 53px;
-  margin-left: 61px;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
