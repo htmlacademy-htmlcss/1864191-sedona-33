@@ -69,7 +69,7 @@
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Инфраструктура</legend>
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <input class="control-input" type="checkbox" name="pool" id="pool" checked>
@@ -86,7 +86,7 @@
               </ul>
             </fieldset>
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья</legend>
+              <legend class="catalog-filter-title">Тип жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <input class="control-input" type="radio" name="housing-type" value="hotel" id="hotel" checked>
@@ -104,18 +104,12 @@
             </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <input type="number" name="from" placeholder="0">
-              <input type="number" name="to" placeholder="9000">
+              <input class="price-input" type="number" name="from" placeholder="0">
+              <input class="price-input" type="number" name="to" placeholder="9000">
             </fieldset>
             <div class="button-wrapper">
-              <ul class="button-submit-reset">
-                <li class="button-submit">
-                  <button type="submit">Применить</button>
-                </li>
-                <li class="button-reset">
-                  <button type="reset">Сбросить</button>
-                </li>
-              </ul>
+              <button class="button-submit" type="submit">Применить</button>
+              <button class="button-reset" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
@@ -198,7 +192,7 @@
             </div>
             <div class="card-button-favorite">
               <a class="card-button" href="#">ПОДРОБНЕЕ</a>
-              <button class="card-favorite" type="button">В ИЗБРАННОЕ</button>
+              <button class="card-favorite card-favorite-added" type="button">В ИЗБРАННОМ</button>
             </div>
             <div class="card-stars-rating">
               <img class="stars-img" src="images/stars-2.svg" alt="2 звезды.">
@@ -228,7 +222,7 @@
         </div>
         <div class="pagination-wrapper">
           <ul class="pagination-list">
-            <li class="pagination-item pagination-item-current">
+            <li class="pagination-item">
               <a class="pagination-link pagination-link-current ">1</a>
             </li>
             <li class="pagination-item">
