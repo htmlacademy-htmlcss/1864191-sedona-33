@@ -101,7 +101,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   min-width: 345px;
-  height: 65px;
+  min-height: 66px;
   margin: 0;
   margin-left: 186px;
   margin-right: auto;
@@ -116,13 +116,15 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 264px;
-  height: 65px;
+  min-width: 264px;
+  height: 66px;
   margin: 0;
   padding: 0;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 0;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 26px;
@@ -131,20 +133,31 @@ body {
   color: inherit;
 }
 
+.navigation-user .navigation-link {
+  display: block;
+  min-width: 42px;
+  min-height: 66px;
+  text-align: center;
+  padding: 0;
+  padding-top: 23.45px;
+  padding-bottom: 24.45px;
+}
+
+/*
 .navigation-user-item:nth-child(1) {
   margin-right: 24px;
 }
-
+*/
 .navigation-user-item:nth-child(2) {
-  margin-right: 33px;
+  margin-right: 20px;
 }
 
 
 .navigation-button {
-  width: 160px;
-  height: 37px;
+  min-width: 160px;
+  min-height: 37px;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -301,6 +314,7 @@ body {
 .hotel-search-description {
   margin: 0;
   margin-bottom: 56px;
+  padding: 0;
   padding-top: 29px;
   text-align: center;
   font-family: "PT Sans", sans-serif;
@@ -372,11 +386,11 @@ body {
 .field {
   padding: 0;
   padding-left: 22px;
-  width: 600px;
+  width: 580px;
   height: 60px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: 260px;
+  line-height: 26px;
   font-weight: 400;
   text-align: left;
   background-color: #f2f2f2;
@@ -404,6 +418,7 @@ body {
   /*Catalog*/
 
   /*inner-header*/
+
 .inner-header {
   display: flex;
   flex-direction: column;
@@ -429,6 +444,8 @@ body {
 .breadcrumbs {
   display: flex;
   margin: 0;
+  margin-top: -5px;
+  padding: 0;
   margin-bottom: 45px;
   padding-left: 73px;
 }
@@ -442,11 +459,12 @@ body {
   font-weight: 400;
 }
 
+/*filter*/
+
 .catalog-filter-form {
   display: flex;
   margin: 0;
-  padding: 0 71px;
-
+  padding: 0 72px 0 71px;
 }
 
 .catalog-filter-group {
@@ -456,20 +474,24 @@ body {
 }
 
 .catalog-filter-group:nth-child(1) {
-  margin-right: 67px;
+  margin-right: 68px;
 }
 
 .catalog-filter-group:nth-child(2) {
-  margin-right: 167px;
+  margin-right: 155px;
+}
+
+.catalog-filter-group:nth-child(3) {
+  min-width: 287px;
 }
 
 .catalog-filter-list {
-  padding-left: 1px;
+  padding: 0;
   margin: 0;
 }
 
 .catalog-filter-item {
-  padding-bottom: 13px;
+  padding: 0 15px 13px;
 }
 
 .catalog-filter-title {
@@ -478,33 +500,67 @@ body {
   line-height: auto;
   font-weight: 700;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 34px;
+}
+
+.catalog-filter-group:nth-child(3) .catalog-filter-title {
+  padding-bottom: 38px;
 }
 
 .control {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: auto;
+  line-height: 23.29px;
   font-weight: 400;
 }
 
-.button-wrapper {
-  margin: 0;
-  padding: 0;
+.price-input {
+  width: 134.5px;
+  height: 42px;
+  border: 2px solid #ffffff;
+  border-radius: 4px 0 0 4px;
+  background: transparent;
 }
 
-.button-submit-reset {
-  margin: 0;
+.price-input:last-child {
+  border-radius: 0 4px 4px 0;
+  margin-left: -5px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
   padding: 0;
+  padding-top: 59px;
 }
 
 .button-submit {
-  padding-top: 60px;
-  padding-left: 81px;
+  width: 160px;
+  height: 48px;
+  margin-bottom: 7px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20.7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #83b3d3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
 }
 
 .button-reset {
-  padding-left: 81px;
+  width: 160px;
+  height: 48px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 23.29px;
+  font-weight: 400;
+  background: transparent;
+  color: #ffffff;
+  border: none;
 }
 
 /*sorting*/
@@ -524,7 +580,7 @@ body {
   margin-right: 192px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
-  line-height: auto;
+  line-height: 38.82;
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
@@ -533,12 +589,12 @@ body {
 
 .select-control-sorting {
   margin-right: 81px;
-  padding-left: 17px;
+  padding-left: 13px;
   min-width: 287px;
   min-height: 48px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: auto;
+  line-height: 23.29;
   font-weight: 400;
   color: #333333;
   border: 2px solid #e5e5e5;
@@ -557,8 +613,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border: 2px solid #000000;
   border-radius: 4px;
   background-color: #ffffff;
@@ -604,7 +660,7 @@ body {
 
 .card-type-price {
   display: flex;
-  padding-top: 16px;
+  padding-top: 21px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -634,7 +690,7 @@ body {
   padding-top: 8px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: auto;
+  line-height: 20.7px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -650,7 +706,7 @@ body {
   height: 37px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: auto;
+  line-height: 20.7px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -658,6 +714,10 @@ body {
   background-color: #83b3d3;
   border-radius: 4px;
   border: none;
+}
+
+.card-favorite-added {
+  background-color: #7db54f;
 }
 
 .card-stars-rating {
@@ -674,7 +734,7 @@ body {
   padding-bottom: 9px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: auto;
+  line-height: 20.7px;
   font-weight: 400;
   background-color: #f2f2f2;
   text-transform: uppercase;
@@ -692,8 +752,8 @@ body {
   width: 1056px;
   min-height: 60px;
   margin: 0 auto;
-  margin-bottom: 30px;
-  padding: 30px;
+  margin-bottom: 29px;
+  padding: 28px 0 30px 0;
   text-align: center;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -719,58 +779,45 @@ body {
 /*pagination*/
 
 .pagination-wrapper {
-  width: 1056px;
-  height: 55px;
-  margin: 0 auto;
-  margin-bottom: 73px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 1056px;
+  min-height: 55px;
+  margin: 0 auto;
+  margin-bottom: 74px;
 }
 
 .pagination-list {
   display: flex;
   padding: 0;
+  margin: 0;
 }
 
-.pagination-item {
-  width: 55px;
-  max-height: 55px;
+.pagination-item:not(:last-child) {
   margin-right: 8px;
-  font-family: "PT Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  background-color: #83b3d3;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  border: none;
-  border-radius: 4px;
-}
-
-.pagination-item-current {
-  width: 55px;
-  max-height: 55px;
-  margin-right: 8px;
-  font-family: "PT Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  background-color: #f2f2f2;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  border: none;
-  border-radius: 4px;
 }
 
 .pagination-link {
-  text-decoration: none;
+  display: block;
+  min-width: 55px;
+  min-height: 55px;
+  padding-top: 17px;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
   color: #ffffff;
- }
+  text-decoration: none;
+  background-color: #83b3d3;
+  border: none;
+  border-radius: 4px;
+}
 
 .pagination-link-current {
-  text-decoration: none;
   color: #000000;
+  background-color: #f2f2f2;
 }
 
 .select-control-number {
@@ -780,7 +827,7 @@ body {
   padding-left: 12px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: auto;
+  line-height: 23.29px;
   font-weight: 400;
   color: #333333;
   border: 2px solid #e5e5e5;
@@ -817,14 +864,13 @@ margin-bottom: 140px;
 
 .footer-social-list {
   display: flex;
-  flex-direction: row;
-  width: 107px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 107px;
   min-height: 18px;
   margin-right: 61px;
   padding: 0;
-  justify-content: space-between;
-  align-items: center;
-}
+  }
 
 .phone {
   width: 720px;
