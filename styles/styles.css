@@ -21,7 +21,6 @@ html {
 
 body {
   flex-grow: 1;
-  width: 1280px;
   min-height: 100%;
   margin: 0 auto;
   display: flex;
@@ -136,11 +135,10 @@ body {
 .navigation-user .navigation-link {
   display: block;
   min-width: 42px;
-  min-height: 66px;
   text-align: center;
   padding: 0;
-  padding-top: 23.45px;
-  padding-bottom: 24.45px;
+  padding-top: 22px;
+  padding-bottom: 18px;
 }
 
 /*
@@ -168,6 +166,7 @@ body {
   background-color: #756257;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /*promo*/
@@ -325,7 +324,7 @@ body {
 
 .hotel-search-button {
   min-width: 575px;
-  height: 60px;
+  min-height: 60px;
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
@@ -336,6 +335,7 @@ body {
   background-color: #756257;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
   /*subscribe*/
@@ -400,7 +400,7 @@ body {
 
 .subscribe-button {
   width: 200px;
-  height: 60px;
+  min-height: 60px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", sans-serif;
@@ -413,6 +413,7 @@ body {
   background-color: #83b3d3;
   border: none;
   border-radius: 0 10px 10px 0;
+  cursor: pointer;
   }
 
   /*Catalog*/
@@ -424,7 +425,7 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 408px;
-  margin-bottom: 44px;
+  margin-bottom: 45px;
   color: #ffffff;
   background-color: #756257;
   background-image: url("../images/catalog-background.jpg");
@@ -510,16 +511,22 @@ body {
 .control {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: 23.29px;
+  line-height: 23px;
   font-weight: 400;
 }
 
 .price-input {
-  width: 134.5px;
+  max-width: 119px;
   height: 42px;
   border: 2px solid #ffffff;
   border-radius: 4px 0 0 4px;
   background: transparent;
+  color: #ffffff;
+  padding-left: 17px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
 }
 
 .price-input:last-child {
@@ -538,29 +545,31 @@ body {
 
 .button-submit {
   width: 160px;
-  height: 48px;
+  min-height: 48px;
   margin-bottom: 7px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: 20.7px;
+  line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
   background-color: #83b3d3;
   color: #ffffff;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .button-reset {
   width: 160px;
-  height: 48px;
+  min-height: 48px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: 23.29px;
+  line-height: 23px;
   font-weight: 400;
   background: transparent;
   color: #ffffff;
   border: none;
+  cursor: pointer;
 }
 
 /*sorting*/
@@ -571,16 +580,16 @@ body {
   max-width: 1057px;
   height: 48px;
   margin: 0 auto;
-  margin-bottom: 53px;
+  margin-bottom: 51px;
 }
 
 .sort-found {
   display: inline-block;
   margin: 0;
-  margin-right: 192px;
+  margin-right: auto;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
-  line-height: 38.82;
+  line-height: 39px;
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
@@ -594,7 +603,7 @@ body {
   min-height: 48px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: 23.29;
+  line-height: 23px;
   font-weight: 400;
   color: #333333;
   border: 2px solid #e5e5e5;
@@ -602,9 +611,9 @@ body {
 }
 
 .sort-button-wrapper {
-  width: 160px;
+  min-width: 160px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .sort-button {
@@ -612,7 +621,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0 0 0 8px;
   width: 44px;
   height: 44px;
   border: 2px solid #000000;
@@ -620,9 +629,23 @@ body {
   background-color: #ffffff;
  }
 
+ .sort-button:nth-child(1) {
+  margin: 0;
+ }
+
 /*hotel-cards*/
 
 .card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
+  row-gap: 8px;
+  margin: 0 72px 32px;
+  padding: 0;
+}
+
+/*
+{
   max-width: 1056px;
   display: flex;
   justify-content: flex-start;
@@ -631,27 +654,25 @@ body {
   margin-bottom: 34px;
   padding: 0;
 }
+*/
 
 .card-item {
   width: 300px;
   max-height: 438px;
   padding: 20px;
-  margin: 0;
-  margin-bottom: 10px;
 }
 
-.card-item:nth-child(2) {
-  margin-left: 18px;
-  margin-right: 18px;
+.card-link {
+  display: block;
+  margin-bottom: 16px;
 }
 
-.card-item:last-child {
-  margin-bottom: 0;
+.card-image {
+  object-fit: cover;
 }
 
 .card-title {
-  padding-top: 16px;
-  margin: 0;
+  margin: 0 0 21px 0;
   font-family: "PT Sans", sans-serif;
   font-size: 24px;
   line-height: auto;
@@ -660,7 +681,7 @@ body {
 
 .card-type-price {
   display: flex;
-  padding-top: 21px;
+  margin-bottom: 16px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -680,17 +701,17 @@ body {
 .card-button-favorite {
   display: flex;
   justify-content: space-between;
-  padding-top: 16px;
+  margin-bottom: 16px;
 }
 
 .card-button {
   width: 133.01px;
-  height: 29px;
+  min-height: 29px;
   margin: 0;
   padding-top: 8px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: 20.7px;
+  line-height: 21px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -703,10 +724,10 @@ body {
 
 .card-favorite {
   width: 140.94px;
-  height: 37px;
+  min-height: 37px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: 20.7px;
+  line-height: 21px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -714,6 +735,7 @@ body {
   background-color: #83b3d3;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .card-favorite-added {
@@ -724,7 +746,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding-top: 16px;
 }
 
 .rating {
@@ -734,7 +755,7 @@ body {
   padding-bottom: 9px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
-  line-height: 20.7px;
+  line-height: 21px;
   font-weight: 400;
   background-color: #f2f2f2;
   text-transform: uppercase;
@@ -761,7 +782,7 @@ body {
 
 .button-show-more {
   width: 620px;
-  height: 60px;
+  min-height: 60px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", sans-serif;
@@ -774,6 +795,7 @@ body {
   background-color: #83b3d3;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /*pagination*/
@@ -827,7 +849,7 @@ body {
   padding-left: 12px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  line-height: 23.29px;
+  line-height: 23px;
   font-weight: 400;
   color: #333333;
   border: 2px solid #e5e5e5;
@@ -847,16 +869,15 @@ margin-bottom: 140px;
 }
 
 .subscribe-description-inner {
-  padding: 46px;
+  padding: 45px;
 }
 
 /*footer*/
 
-.page-footer-container {
+.page-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1200px;
   min-height: 120px;
   margin: 0 auto;
   padding: 0;
