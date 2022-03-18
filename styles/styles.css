@@ -438,7 +438,7 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-  /*subscribe*/
+/*subscribe*/
 
 .subscribe {
   width: 100%;
@@ -547,9 +547,9 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-  /*Catalog*/
+/*Catalog*/
 
-  /*inner-header*/
+/*inner-header*/
 
 .inner-header {
   display: flex;
@@ -1603,7 +1603,10 @@ background-color: rgba(255, 255, 255, 0.6);
 .kids-number {
   grid-column: 3/4;
   grid-row: 3/4;
-  padding-left: 54px;
+  position: relative;
+  display: block;
+  padding-left: 56px;
+
 }
 
 .kids-wrapper {
@@ -1629,7 +1632,7 @@ background-color: rgba(255, 255, 255, 0.6);
 }
 
 .search-form-field {
-  min-width: 420px;
+  min-width: 400px;
   min-height: 50px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -1691,8 +1694,8 @@ background-color: rgba(255, 255, 255, 0.6);
 
 .input-adults-number,
 .input-kids-number {
-  width: 35px;
-  height: 50px;
+  min-width: 35px;
+  min-height: 50px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", sans-serif;
@@ -1791,9 +1794,73 @@ background-color: rgba(255, 255, 255, 0.6);
   color: rgba(255, 255, 255, 0.3);
 }
 
-.kids-number {
-  position: relative;
+/*Tooltip*/
+
+.tooltip {
+  position: absolute;
+  bottom: 183px;
+  right: 225px;
+  width: 25px;
+  height: 25px;
+}
+
+.tooltip-toggle {
+  bottom: 193px;
+  right: 225px;
+  width: 25px;
+  height: 25px;
+  background-color: #83b3d3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip-icon {
+  fill: #ffffff;
+  padding: 7px 5px;
+}
+
+.tooltip-toggle:hover {
+  background-color:#68a2ca;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
   display: block;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: -159px;
+  right: -117px;
+  z-index: 1;
+  display: block;
+  width: 256px;
+  height: 143px;
+  padding: 20px 18px 18px 22px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: start;
+  color: #FFFFFF;
+  background-color: #333333;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.tooltip-text::before {
+  position: absolute;
+  top: -7px;
+  left: 121px;
+  width: 13px;
+  height: 13px;
+  background-color: #333333;
+  border: none;
+  transform: rotate(45deg);
+  content: "";
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
@@ -1805,45 +1872,3 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-/* TOOLTIP
-
-.tooltip {
-  position: absolute;
-  padding: 15px 18px 18px 22px;
-  width: 256px;
-  height: 143px;
-  background-color: #333333;
-  border: none;
-  border-radius: 10px;
-}
-
-.tooltip-toggle {
-  position: relative;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-color: #83b3d3;
-  border: none;
-  border-radius: 50%;
-  margin-left: 9px;
-  cursor: pointer;
-}
-
-.tooltip-icon {
-  fill: #ffffff;
-  display: block;
-}
-
-.tooltip-toggle:hover {
-  background-color: #68a2ca;
-}
-
-.tooltip-text {
-  font-family: "PT Sans", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #FFFFFF;
-}
-*/
