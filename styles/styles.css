@@ -255,9 +255,10 @@ body {
   margin-bottom: 63px;
   text-align: center;
   background-color: #928680;
+  background-size: cover;
   background: url("../images/divider.svg") bottom no-repeat,
   url("../images/index-background.jpg") center no-repeat;
-  background-size: cover;
+
 }
 
 .promo-picture {
@@ -1871,4 +1872,8 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
