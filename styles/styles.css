@@ -63,6 +63,11 @@ body {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .container {
   width: 1200px;
   min-height: 100%;
@@ -199,8 +204,8 @@ body {
   line-height: 13px;
   font-weight: 400;
   box-sizing: border-box;
-  padding-top: 2.5px;
-  padding-bottom: 4.5px;
+  padding-top: 3px;
+  padding-bottom: 5px;
 }
 
 .navigation-link:hover {
@@ -283,6 +288,7 @@ body {
 .advantages-title {
   margin: 0;
   margin-bottom: 80px;
+  padding: 0 20px;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 36px;
@@ -311,9 +317,10 @@ body {
 
 .advantages-text {
   width: 400px;
-  min-height: 384px;
+  min-height: 364px;
   margin: 0;
   padding: 0;
+  padding-bottom: 20px;
 }
 
 .advantages-photo {
@@ -380,7 +387,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 417px;
+  min-height: 416px;
   margin: 0;
 }
 
@@ -397,7 +404,7 @@ body {
 
 .hotel-search-description {
   margin: 0;
-  margin-bottom: 56px;
+  margin-bottom: 55px;
   padding: 0;
   padding-top: 29px;
   text-align: center;
@@ -465,7 +472,7 @@ body {
 
 .subscribe-description {
   margin: 0;
-  padding-bottom: 47px;
+  padding-bottom: 46px;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -516,7 +523,7 @@ body {
 
 .subscribe-button {
   display: inline-block;
-  width: 200px;
+  min-width: 200px;
   min-height: 60px;
   margin: 0;
   padding: 0;
@@ -562,6 +569,7 @@ body {
   background-color: #756257;
   background-image: url("../images/catalog-background.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   }
 
 .inner-header-title {
@@ -576,6 +584,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-top: -12px;
   margin-bottom: 42px;
@@ -862,7 +871,7 @@ background-color: rgba(255, 255, 255, 0.6);
   align-items: flex-end;
   margin-left: auto;
   padding: 0;
-  padding-top: 59px;
+  padding-top: 58px;
 }
 
 .button-submit {
@@ -933,7 +942,7 @@ background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   max-width: 1057px;
-  height: 48px;
+  min-height: 48px;
   margin: 0 auto;
   margin-bottom: 51px;
 }
@@ -948,7 +957,6 @@ background-color: rgba(255, 255, 255, 0.6);
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .select-control-sorting {
@@ -986,6 +994,7 @@ background-color: rgba(255, 255, 255, 0.6);
   min-width: 160px;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap
 }
 
 .sort-button {
@@ -1073,7 +1082,7 @@ background-color: rgba(255, 255, 255, 0.6);
 
 .card-type-price {
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -1081,6 +1090,7 @@ background-color: rgba(255, 255, 255, 0.6);
 }
 
 .card-type {
+  display: inline-block;
   width: 133px;
   margin: 0;
   margin-right: 25px;
@@ -1097,7 +1107,7 @@ background-color: rgba(255, 255, 255, 0.6);
 }
 
 .card-button {
-  width: 133.01px;
+  min-width: 133px;
   min-height: 29px;
   margin: 0;
   padding-top: 8px;
@@ -1131,7 +1141,7 @@ background-color: rgba(255, 255, 255, 0.6);
 
 .card-favorite {
   display: inline-block;
-  width: 140.94px;
+  width: 141px;
   min-height: 37px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
@@ -1362,7 +1372,7 @@ background-color: rgba(255, 255, 255, 0.6);
   width: 800px;
   min-height: 241px;
   margin: 0 auto;
-  margin-bottom: 140px;
+  margin-bottom: 138px;
 }
 
 .subscribe-description-inner {
@@ -1497,9 +1507,11 @@ background-color: rgba(255, 255, 255, 0.6);
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-/* .modal-container-close {
+/*Uncomment below to disable modal-container*/
+
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
@@ -1548,6 +1560,7 @@ background-color: rgba(255, 255, 255, 0.6);
 
 
 .modal-title {
+  max-width: 499px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 40px;
@@ -1562,8 +1575,8 @@ background-color: rgba(255, 255, 255, 0.6);
 .search-form {
   display: grid;
   grid-template-columns: 155px 135px 154px 135px;
-  grid-template-rows: 80px 80px 50px 89px;
-  row-gap: 11px;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 15px;
 }
 
 .arrival-date {
@@ -1707,6 +1720,7 @@ background-color: rgba(255, 255, 255, 0.6);
   border: none;
   background-color: #f2f2f2;
   text-align: center;
+  align-self: start;
 }
 
 .button-plus,
@@ -1766,7 +1780,9 @@ background-color: rgba(255, 255, 255, 0.6);
   width: 575px;
   min-height: 60px;
   margin: 0 auto;
+  margin-top: 24px;
   padding: 0;
+
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 40px;
@@ -1799,8 +1815,8 @@ background-color: rgba(255, 255, 255, 0.6);
 
 .tooltip {
   position: absolute;
-  bottom: 183px;
-  right: 225px;
+  bottom: 181px;
+  right: 224px;
   width: 25px;
   height: 25px;
 }
@@ -1817,8 +1833,10 @@ background-color: rgba(255, 255, 255, 0.6);
 }
 
 .tooltip-icon {
+  width: 1px;
+  height: 9px;
   fill: #ffffff;
-  padding: 7px 5px;
+  padding: 5px 5px;
 }
 
 .tooltip-toggle:hover {
