@@ -1837,15 +1837,6 @@ body {
   padding: 5px 5px;
 }
 
-.tooltip-toggle:hover {
-  background-color: #68a2ca;
-}
-
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
-  display: block;
-}
-
 .tooltip-text {
   position: absolute;
   bottom: -159px;
@@ -1877,6 +1868,15 @@ body {
   border: none;
   transform: rotate(45deg);
   content: "";
+}
+
+.tooltip-toggle:hover {
+  background-color: #68a2ca;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
